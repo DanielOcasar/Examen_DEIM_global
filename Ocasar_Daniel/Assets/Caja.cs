@@ -12,6 +12,8 @@ public class Caja : MonoBehaviour
     bool cestaViva = false;
     [SerializeField] AudioSource audioSource;
     public AudioClip huevoRoto;
+    [SerializeField] AudioSource audioSource2;
+    public AudioClip gallo;
 
     // Start is called before the first frame update
     void Start()
@@ -67,8 +69,15 @@ public class Caja : MonoBehaviour
                 print("Sonido");
                 //Destroy(this.gameObject);
             }
+
+          if(other.gameObject.tag == "Enemy" && cestaViva = true)
+        {
+            audioSource.PlayOneShot(gallo);
+        }
     }
 
-
+    //no he conseguido hacer funcionar la boleana para que al pulsar el voton "X" se activara la cesta, ocultando el mesh renderer de la cesta y activandolo cuando se pulsa el boton
+    //llluego para el sonido del gallo es un collider que si el tag == "enemy" le toca y a su vez el mesh renderer está activo (la boleana), hace que suene el sonido "Gallo". 
+    //pero como no he conseguido hacer funcionar la boleana pues directamente no he podido hacer este paso, pero como ves sé cual es el proceso.
 
 }
