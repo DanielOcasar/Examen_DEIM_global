@@ -66,7 +66,7 @@ public class Caja : MonoBehaviour
                 audioSource.PlayOneShot(huevoRoto);
                 print("Sonido");
                 //Destroy(this.gameObject);
-            })
+            }
     }
 
 

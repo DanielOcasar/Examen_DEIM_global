@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class Colision : MonoBehaviour
 {
-    [SerializeField] MeshRenderer huevoMesh;
     [SerializeField] AudioSource audioSource;
     public AudioClip huevoRoto;
     // Start is called before the first frame update
     void Start()
-    {
-        //audioSource = GetComponent<audioSource>();
-
+    { 
     }
 
     // Update is called once per frame
@@ -22,7 +19,7 @@ public class Colision : MonoBehaviour
  
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Plano")
+        if (other.gameObject.tag == "Enemy")
         {
             audioSource.PlayOneShot(huevoRoto);
             print("Sonido");
